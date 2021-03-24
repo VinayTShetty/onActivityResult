@@ -9,7 +9,7 @@
     android:layout_margin="10dp"
     android:orientation="vertical"
     android:weightSum="1">
-    <EditText
+    <TextView
         android:id="@+id/activity_id"
         android:layout_weight="0.10"
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
         android:textSize="20dp"
         android:textStyle="bold|italic"
         android:gravity="center">
-    </EditText>
+    </TextView>
     <EditText
         android:id="@+id/name_id_editText"
         android:layout_weight="0.10"
@@ -63,7 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        android:hint="Name"
+        android:hint="Sex"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold|italic"
