@@ -9,20 +9,20 @@
     android:layout_margin="10dp"
     android:orientation="vertical"
     android:weightSum="1">
-    <TextView
+    <EditText
         android:id="@+id/activity_id"
         android:layout_weight="0.10"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        android:hint="MainActivity"
+        android:hint="Second Activity"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold|italic"
         android:gravity="center">
-    </TextView>
-    <TextView
-        android:id="@+id/name_id_textView"
+    </EditText>
+    <EditText
+        android:id="@+id/name_id_editText"
         android:layout_weight="0.10"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -32,9 +32,9 @@
         android:textSize="20dp"
         android:textStyle="bold|italic"
         android:gravity="center">
-    </TextView>
-    <TextView
-        android:id="@+id/age_id_textView"
+    </EditText>
+    <EditText
+        android:id="@+id/age_id_editText"
         android:layout_weight="0.10"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -44,9 +44,9 @@
         android:textSize="20dp"
         android:textStyle="bold|italic"
         android:gravity="center">
-    </TextView>
-    <TextView
-        android:id="@+id/phoneNUmber_id_textView"
+    </EditText>
+    <EditText
+        android:id="@+id/phoneNUmber_id_editText"
         android:layout_weight="0.10"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -56,19 +56,19 @@
         android:textSize="20dp"
         android:textStyle="bold|italic"
         android:gravity="center">
-    </TextView>
-    <TextView
-        android:id="@+id/sex_id_textView"
+    </EditText>
+    <EditText
+        android:id="@+id/sex_id_editText"
         android:layout_weight="0.10"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        android:hint="Sex"
+        android:hint="Name"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold|italic"
         android:gravity="center">
-    </TextView>
+    </EditText>
     <Button
         android:id="@+id/activity_button_navigate"
         android:layout_weight="0.10"

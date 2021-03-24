@@ -1,6 +1,5 @@
 package com.onActivityResult;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,20 +8,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-  private TextView nameTexView, ageTextView, phoneNumberTextView, sexxTextView;
+public class SecondActivity extends AppCompatActivity {
+  private   TextView nameTexView, ageTextView, phoneNumberTextView, sexxTextView;
   private   Button navigateButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_second);
         intializeViews();
         onClickButton();
-        makeTextInvisible();
-    }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
     }
     private void intializeViews() {
         /**
@@ -38,20 +32,13 @@ public class MainActivity extends AppCompatActivity {
         navigateButton = (Button) findViewById(R.id.activity_button_navigate);
 
     }
-    private void makeTextInvisible(){
-        nameTexView.setVisibility(View.INVISIBLE);
-        ageTextView.setVisibility(View.INVISIBLE);
-        phoneNumberTextView.setVisibility(View.INVISIBLE);
-        sexxTextView.setVisibility(View.INVISIBLE);
-    }
     private void onClickButton(){
         navigateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,SecondActivity.class);
+                Intent intent=new Intent(SecondActivity.this,MainActivity.class);
                 startActivity(intent);
             }
         });
     }
-
 }
