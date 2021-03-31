@@ -31,7 +31,8 @@
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold|italic"
-        android:gravity="center">
+        android:gravity="center"
+        android:imeOptions="normal">
     </EditText>
     <EditText
         android:id="@+id/age_id_editText"
@@ -43,7 +44,9 @@
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold|italic"
-        android:gravity="center">
+        android:gravity="center"
+        android:inputType="number"
+        android:imeOptions="normal">
     </EditText>
     <EditText
         android:id="@+id/phoneNUmber_id_editText"
@@ -55,7 +58,9 @@
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold|italic"
-        android:gravity="center">
+        android:inputType="number"
+        android:gravity="center"
+        android:imeOptions="normal">
     </EditText>
     <EditText
         android:id="@+id/sex_id_editText"
@@ -66,8 +71,10 @@
         android:hint="Sex"
         android:textColor="@color/black"
         android:textSize="20dp"
+        android:inputType="text"
         android:textStyle="bold|italic"
-        android:gravity="center">
+        android:gravity="center"
+        android:imeOptions="actionDone">
     </EditText>
     <Button
         android:id="@+id/activity_button_navigate"

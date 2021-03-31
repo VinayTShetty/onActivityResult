@@ -41,14 +41,12 @@ public class SecondActivity extends AppCompatActivity {
                 String phoneNumber=phoneNumberTextView.getText().toString();
                 String sex=sexxTextView.getText().toString();
                 Intent intent=new Intent();
-                intent.putExtra("NAME",name);
-                intent.putExtra("AGE",age);
-                intent.putExtra("PH",phoneNumber);
-                intent.putExtra("SEX",sex);
+                intent.putExtra(getResources().getString(R.string.NAME),name);
+                intent.putExtra(getResources().getString(R.string.AGE),age);
+                intent.putExtra(getResources().getString(R.string.PHONE_NO),phoneNumber);
+                intent.putExtra(getResources().getString(R.string.SEX),sex);
                 setResult(RESULT_OK,intent);
                 finish();
-              //  Intent intent=new Intent(SecondActivity.this,MainActivity.class);
-                //startActivity(intent);
             }
         });
     }

@@ -12,14 +12,14 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private TextView nameTexView, ageTextView, phoneNumberTextView, sexxTextView;
     private Button navigateButton;
-
+    private static final int REQUEST_CODE=10;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         intializeViews();
         onClickButton();
-        makeTextInvisible();
+        makeTextInvisible_Visible(true);
     }
 
     private void intializeViews() {
@@ -37,11 +37,25 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void makeTextInvisible() {
-        nameTexView.setVisibility(View.INVISIBLE);
-        ageTextView.setVisibility(View.INVISIBLE);
-        phoneNumberTextView.setVisibility(View.INVISIBLE);
-        sexxTextView.setVisibility(View.INVISIBLE);
+    private void makeTextInvisible_Visible(boolean true_visible) {
+        if(true_visible){
+            nameTexView.setVisibility(View.INVISIBLE);
+            ageTextView.setVisibility(View.INVISIBLE);
+            phoneNumberTextView.setVisibility(View.INVISIBLE);
+            sexxTextView.setVisibility(View.INVISIBLE);
+        }else {
+            nameTexView.setVisibility(View.VISIBLE);
+            ageTextView.setVisibility(View.VISIBLE);
+            phoneNumberTextView.setVisibility(View.VISIBLE);
+            sexxTextView.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void assignDetialsToText(String name,String age,String phoneNUmber,String sex){
+        nameTexView.setText(name);
+        ageTextView.setText(age);
+        phoneNumberTextView.setText(phoneNUmber);
+        sexxTextView.setText(sex);
     }
 
     private void onClickButton() {
@@ -49,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                startActivityForResult(intent,10);
+                startActivityForResult(intent,REQUEST_CODE);
             }
         });
     }
@@ -57,10 +71,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 10) {
+        if (requestCode == REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
-                String result = data.getStringExtra("NAME");
-                System.out.println(result);
+                String name = data.getStringExtra(getResources().getString(R.string.NAME));
+                String age = data.getStringExtra(getResources().getString(R.string.AGE));
+                String phoneNumber = data.getStringExtra(getResources().getString(R.string.PHONE_NO));
+                String sex = data.getStringExtra(getResources().getString(R.string.SEX));
+                makeTextInvisible_Visible(false);
+                assignDetialsToText(name,age,phoneNumber,sex);
             }
             if (resultCode == RESULT_CANCELED) {
 

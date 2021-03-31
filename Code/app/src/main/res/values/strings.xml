@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">OnActivityResult</string>
+    <string name="NAME">Name</string>
+    <string name="AGE">Age</string>
+    <string name="PHONE_NO">Phone Number</string>
+    <string name="SEX">Sex</string>
 </resources>
