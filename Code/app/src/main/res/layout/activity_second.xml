@@ -62,20 +62,28 @@
         android:gravity="center"
         android:imeOptions="normal">
     </EditText>
-    <EditText
-        android:id="@+id/sex_id_editText"
-        android:layout_weight="0.10"
+    <RadioGroup
+        android:id="@+id/radio_group_mf_id"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:hint="Sex"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:inputType="text"
-        android:textStyle="bold|italic"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
         android:imeOptions="actionDone">
-    </EditText>
+        <RadioButton
+            android:id="@+id/radio_button_male_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/MALE"
+            android:layout_weight="0.5">
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/radio_button_female_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/FEMALE"
+            android:layout_weight="0.5">
+        </RadioButton>
+    </RadioGroup>
     <Button
         android:id="@+id/activity_button_navigate"
         android:layout_weight="0.10"

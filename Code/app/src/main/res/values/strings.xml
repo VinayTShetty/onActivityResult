@@ -4,4 +4,6 @@
     <string name="AGE">Age</string>
     <string name="PHONE_NO">Phone Number</string>
     <string name="SEX">Sex</string>
+    <string name="MALE">Male</string>
+    <string name="FEMALE">Female</string>
 </resources>
